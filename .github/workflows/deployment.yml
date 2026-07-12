@@ -29,4 +29,4 @@ jobs:
 
       # 5. Menghapus image yang tidak digunakan
       - name: Remove Unused Images
-        run: docker image prune -fage prune -f
+        run: docker image prune -f
