@@ -19,8 +19,9 @@ jobs:
         run: docker compose build --no-cache
 
       # 3. Menghentikan container lama
-      - name: Stop Container
-        run: docker compose down || true
+- name: Stop Container
+  continue-on-error: true
+  run: docker compose down
 
       # 4. Menjalankan container baru
       - name: Start Container
