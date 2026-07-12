@@ -19,9 +19,9 @@ jobs:
         run: docker compose build --no-cache
 
       # 3. Menghentikan container lama
-- name: Stop Container
-  continue-on-error: true
-  run: docker compose down
+      - name: Stop Container
+        continue-on-error: true
+        run: docker compose down
 
       # 4. Menjalankan container baru
       - name: Start Container
@@ -29,4 +29,4 @@ jobs:
 
       # 5. Menghapus image yang tidak digunakan
       - name: Remove Unused Images
-        run: docker image prune -f
+        run: docker image prune -fage prune -f
